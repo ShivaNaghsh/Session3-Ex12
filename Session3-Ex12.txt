@@ -1,0 +1,36 @@
+
+/* Write a code which gets two numbers and displays the greatest common factor of them.*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Session3_Ex12
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter the first number:");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter the second number:");
+            int num2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("The greatest common factor of these two numbers is:\t");
+            int gcf = 0;
+            for (int i = 1; i <= num1 || i <= num2; i++ )
+            {
+                if (num1%i == 0 && num2 % i == 0)
+                {   if (i > gcf)
+                    {
+                        gcf = i;
+                    }
+                }
+            }
+            Console.WriteLine(gcf);
+
+            Console.ReadKey();
+        }
+    }
+}
